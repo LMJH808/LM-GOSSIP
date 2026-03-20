@@ -1,0 +1,14 @@
+{
+    "rewrites": [
+      { "source": "/", "destination": "/home/index.html" },
+      { "source": "/post/:id", "destination": "/post/index.html" }
+    ],
+    "headers": [
+      {
+        "source": "/(.*).json",
+        "headers": [
+          { "key": "Cache-Control", "value": "no-store" }
+        ]
+      }
+    ]
+  }

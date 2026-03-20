@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>龍門八卦 LM-Gossip | 首頁</title>
+    <link rel="icon" type="image/x-icon" href="../asset/logo.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../asset/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body class="bg-light">
+
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <div class="logo-btn js-nav-home">
+                <img src="../asset/logo.png" alt="Logo" class="logo-img">
+                LM-GOSSIP <span class="sub-brand">龍門八卦</span>
+            </div>
+            <div class="nav-links">
+                <button class="btn-primary js-open-modal">
+                    <span class="material-icons">add_circle_outline</span> 我要投稿
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="search-section">
+        <div class="container">
+            <h1>探索龍門大小事</h1>
+            <div class="search-bar-container">
+                <input type="text" class="search-input js-search-input" placeholder="搜尋標題或內容...">
+                <button class="btn-search js-btn-search">ENTER</button>
+            </div>
+            <div class="quick-tags">
+                <span class="material-icons">trending_up</span>
+                <span>熱搜：</span>
+                <button class="tag js-quick-tag"># 段考</button>
+                <button class="tag js-quick-tag"># 班級八卦</button>
+                <button class="tag js-quick-tag"># 老師八卦</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><span class="material-icons">dynamic_feed</span> 即時資訊流</h2>
+                <div class="filter-group">
+                    <select class="category-select js-category-filter">
+                        <option value="all">所有類別</option>
+                        <option value="段考">段考</option>
+                        <option value="班級八卦">班級八卦</option>
+                        <option value="老師八卦">老師八卦</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="info-grid js-info-grid">
+                </div>
+        </div>
+    </main>
+
+    <div class="modal-overlay js-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><span class="material-icons">edit_note</span> 建立新投稿</h3>
+                <span class="material-icons js-close-modal close-btn">close</span>
+            </div>
+            
+            <form class="post-submit-form js-post-form">
+                <input type="text" class="js-input-title" placeholder="請輸入標題..." required>
+                
+                <div class="category-input-group">
+                    <input type="text" class="js-category-input" placeholder="自訂分類或點選下方標籤" required>
+                    <div class="category-suggestions">
+                        <span class="tag-chip js-tag-pick">段考</span>
+                        <span class="tag-chip js-tag-pick">班級八卦</span>
+                        <span class="tag-chip js-tag-pick">老師八卦</span>
+                    </div>
+                </div>
+    
+                <textarea class="js-input-content" placeholder="分享你的故事..." required></textarea>
+                
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary js-close-modal">取消</button>
+                    <button type="submit" class="btn-primary-submit">確認發布</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script-min.js"></script>
+</body>
+</html>

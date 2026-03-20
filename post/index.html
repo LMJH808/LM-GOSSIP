@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章詳情 | LM-Gossip</title>
+    <link rel="icon" type="image/x-icon" href="../asset/logo.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../asset/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body class="bg-light">
+
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <div class="logo-btn" onclick="location.href='../home/index.html'" style="cursor:pointer">
+                <img src="../asset/logo.png" alt="Logo" class="logo-img">
+                LM-GOSSIP <span class="sub-brand">龍門八卦</span>
+            </div>
+            <div class="nav-links">
+                <a href="../home/index.html" class="nav-item"><span class="material-icons">home</span> 回首頁</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content-section">
+        <div class="container">
+            <div class="detail-card js-post-container">
+                </div>
+    
+            <section class="comment-section">
+                <h3>💬 匿名留言</h3>
+                <div class="comment-list js-comment-list">
+                    </div>
+                <form class="comment-form js-comment-form">
+                    <textarea class="js-comment-input" placeholder="想說些什麼嗎？" required></textarea>
+                    <button type="submit" class="btn-primary">發表留言</button>
+                </form>
+            </section>
+            
+            <button class="btn-back js-back-btn">返回列表</button>
+        </div>
+    </main>
+
+    <script src="js/script-min.js"></script>
+</body>
+</html>
